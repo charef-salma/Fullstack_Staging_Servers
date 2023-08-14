@@ -1,0 +1,34 @@
+<p>new-server works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ma page</title>
+
+</head>
+<body>
+<p>form-reserver works!</p>
+
+<div>
+  <h1>Book a Server </h1>
+
+  <!-- <app-serveurs [msg]="currentItem"></app-serveurs> -->
+<form [formGroup]="BookForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"  formControlName="nom">Staging Name</label>
+
+
+  </div>
+  <form [formGroup]="BookForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"  formControlName="status">Staging Status</label>
+      <select class="form-select"  formControlName="nom">
+
+        <option value="free">free</option>
+        </select>
+    </div>
+    <div class="mb-3">
+      <button  type="submit" class="btn btn-outline-primary"  >Primary</button>
+    </div>
+
+    </form>
+

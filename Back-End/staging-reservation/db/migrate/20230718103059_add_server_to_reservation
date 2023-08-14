@@ -1,0 +1,6 @@
+class AddServerToReservation < ActiveRecord::Migration[6.1]
+#   def change
+#     # Add foreign key assistant_id to users that points to tasks
+#     add_reference :reservers, :reserver, type: :uuid, null: true, foreign_key: { to_table: :serveurs }
+#   end
+end

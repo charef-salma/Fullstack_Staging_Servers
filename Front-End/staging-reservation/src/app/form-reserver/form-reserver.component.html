@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ma page</title>
+
+</head>
+<body>
+<p>form-reserver works!</p>
+
+<div>
+  <h1>Book a Server </h1>
+
+  <!-- <app-serveurs [msg]="currentItem"></app-serveurs> -->
+<form [formGroup]="BookForm" (ngSubmit)="onSubmit()">
+
+
+  <!-- <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" formControlName="nom">
+  </div> -->
+
+
+ <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">User</label>
+<select class="form-select"  formControlName="nom">
+
+  <option value="" selected></option>
+          <option *ngFor="let user of users" [value]="user">{{ user }}</option>
+
+        </select>
+      </div>
+  <!-- <option selected></option>
+  <option value="Youssef">Youssef</option>
+  <option value="Ahmed">Ahmed</option>
+  <option value="Rahma">Rahma</option>
+  <option value="Toutou">Toutou</option>
+  <option value="seif">Saeif</option>
+  <option value="Riadth">Riadth</option>
+  <option value="Ameur">Ameur</option>
+</select>
+</div> -->
+
+
+
+ <!-- <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Staging</label>
+<select class="form-select"  formControlName="serveur_name">  -->
+
+  <!-- <option selected></option> -->
+  <!-- <option [value]="'Default'"    [selected]="id === 8"[disabled]="id !== 8">Default</option>
+  <option [value]="'Staging V1'" [selected]="id === 1" [disabled]="id !== 1">V1</option>
+  <option [value]="'Staging V2'" [selected]="id === 2"[disabled]="id !== 2">V2</option>
+  <option [value]="'Staging V3'" [selected]="id === 3"[disabled]="id !== 3">V3</option>
+  <option [value]="'Staging v4'" [selected]="id === 4"[disabled]="id !== 4">V4</option>
+  <option [value]="'Staging v5'" [selected]="id === 5"[disabled]="id !== 5">V5</option>
+  <option [value]="'Staging v6'" [selected]="id === 6"[disabled]="id !== 6">V6</option>
+  <option [value]="'Staging v7'" [selected]="id === 7"[disabled]="id !== 7">V7</option>
+  <option [value]=""></option>
+</select>
+
+</div>  -->
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Speciality</label>
+<select class="form-select"  formControlName="specialite" >
+  <option value="" selected></option>
+  <option *ngFor="let speciality of filterSpecialiteByUser() " [value]="speciality">{{ speciality }}</option>
+</select>
+</div>
+
+
+
+  <!-- <option selected></option>
+  <option value="QA">QA</option>
+  <option value="DevOps">DevOps</option>
+  <option value="BackEnd">Backend</option>
+  <option value="FrontEnd">FrontEnd</option>
+</select>
+</div> -->
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Duration</label>
+<select class="form-select"  formControlName="periode">
+  <option selected></option>
+  <option value="2h">2h</option>
+  <option value="4h">4h</option>
+  <option value="6h">6h</option>
+  <option value="8h">8h</option>
+</select>
+</div>
+
+
+<div class="mb-3">
+  <button (click)="changeServerStatus()" type="submit" class="btn btn-outline-primary"  >Primary</button>
+</div>
+
+</form>
+</div>
+</body>

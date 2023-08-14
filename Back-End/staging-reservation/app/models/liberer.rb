@@ -1,0 +1,2 @@
+class Liberer < ApplicationRecord
+end

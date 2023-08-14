@@ -1,0 +1,69 @@
+<p>update-serveur works!</p>
+
+<div>
+  <h1>Update a Server </h1>
+  <!-- <div *ngIf="BookForm"> -->
+  <form *ngIf="BookForm" [formGroup]="BookForm"    (ngSubmit)="onSubmit()">
+ <h1>ygyu</h1>
+
+
+  <!--  -->
+  <!-- <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" formControlName="nom">
+  </div> -->
+
+ <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">User</label>
+<select class="form-select"  formControlName="nom">
+  <option selected>Youssef</option>
+  <option value="1">Ahmed</option>
+  <option value="2">Rahma</option>
+  <option value="3">Toutou</option>
+  <option value="3">Saeif</option>
+  <option value="3">Riadth</option>
+  <option value="3">Ameur</option>
+</select>
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Staging</label>
+<select class="form-select"  formControlName="serveur"  >
+  <option selected>V1</option>
+  <option value="1">V2</option>
+  <option value="2">V3</option>
+  <option value="3">V4</option>
+  <option value="3">V5</option>
+  <option value="3">V6</option>
+  <option value="3">V7</option>
+</select>
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Speciality</label>
+<select class="form-select"  formControlName="specialite">
+  <option selected>QA</option>
+  <option value="1">DevOps</option>
+  <option value="2">Backend</option>
+  <option value="3">FrontEnd</option>
+</select>
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Staging</label>
+<select class="form-select"  formControlName="periode">
+  <option selected>2h</option>
+  <option value="1">4h</option>
+  <option value="2">6h</option>
+  <option value="3">8h</option>
+</select>
+</div>
+<div class="mb-3">
+  <button type="submit" class="btn btn-outline-primary">Update server</button>
+</div>
+
+ </form>
+<!-- </div> -->
+</div>
